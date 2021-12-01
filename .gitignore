@@ -130,3 +130,6 @@ dmypy.json
 
 # Ignore our password file
 .secret_git_key
+
+# Ignore text files
+*.txt
