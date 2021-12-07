@@ -16,7 +16,7 @@ oxygen_lines = lines
 carbon_lines = lines
 
 for a in range(length):
-    # first go through and find how many occurences of that bit
+    # first go through and find how many occurences of that bit (oxygen)
     oxygen_ones_occurences = sum([int(_[a]) for _ in oxygen_lines])
     oxygen_criteria = '1' if oxygen_ones_occurences >= len(oxygen_lines)/2 else '0'
 
@@ -30,10 +30,10 @@ for a in range(length):
         oxygen_lines = new_oxygen_list
 
 
+    # do the same for carbon
     carbon_ones_occurences = sum([int(_[a]) for _ in carbon_lines])
     carbon_criteria = '0' if carbon_ones_occurences >= len(carbon_lines)/2 else '1'
 
-    # then go through and remove all lines that don't fit the criteria
     if len(carbon_lines) != 1:
         new_carbon_list = []
         for carbon_line in carbon_lines:
