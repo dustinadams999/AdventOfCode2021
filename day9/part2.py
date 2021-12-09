@@ -21,8 +21,6 @@ def main():
     basins.sort()
     print(basins[-1]*basins[-2]*basins[-3])
 
-    #shell()
-
 def check_basin(reference, grid, i,j):
     if  i < 0 or i >= len(grid) or j < 0 or j >= len(grid[i]) or reference[i,j] or grid[i][j] == 9:
         return 0
